@@ -24,20 +24,29 @@
   <script>
 
 const canvas = document.getElementById("breakoutCanvas");
-    canvas.width = 200
-    canvas.height =200
+    canvas.width = 300
+    canvas.height =500
     const ctx = canvas.getContext("2d");
+
+let startx=50
+let starty=400
+let posx= startx
+let posy = starty
+let test = true
+let distance=0
 
 
 
     function draw (){
     ctx.beginPath();
-      ctx.rect(50, 50, 60, 40);
+      ctx.rect(posx, posy, 50, 70);
       ctx.fillStyle = "blue"
       ctx.fill();
       ctx.closePath();
 
-      
+      ctx.font = '14px Arial';
+      ctx.fillStyle = 'black';
+      ctx.fillText(distance, 30, 150)
       
     }
 
@@ -53,14 +62,34 @@ const canvas = document.getElementById("breakoutCanvas");
     update();
     
     
+    
+    
     canvas.addEventListener('touchstart', function (e) {
 const touchX = e.touches[0].clientX - canvas.offsetLeft;
 const touchY = e.touches[0].clientY - canvas.offsetTop;
 if (touchX >= 50 && touchX <= 50 + 60 &&
 touchY >= 50 && touchY <= 50 + 40 ) {
-alert("0")
+test = true 
 }
 });
+
+canvas.addEventListener('touchmove', function(e) {
+  posx = e.touches[0].clientX - canvas.offsetLeft-25
+  posy = e.touches[0].clientY - canvas.offsetTop-35
+  distancex=posx-startx
+  distancey=posy-starty
+  distance=(distancex)/(distancey)
+  
+});
+
+canvas.addEventListener('touchend', function(e) {
+  posx = startx
+  posy = starty
+  distance=0
+});
+
+
+
 
 
 
