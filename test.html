@@ -1,14 +1,69 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-</head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakout Game</title>
+  <style>
+    canvas {
+      display: block;
+      margin: auto;
+      background: #eee;
+    }
 
+
+
+  </style>
+</head>
 <body>
 
-</body>
+  <canvas id="breakoutCanvas"></canvas>
+  
+  
 
+  <script>
+
+const canvas = document.getElementById("breakoutCanvas");
+    canvas.width = 200
+    canvas.height =200
+    const ctx = canvas.getContext("2d");
+
+
+
+    function draw (){
+    ctx.beginPath();
+      ctx.rect(50, 50, 60, 40);
+      ctx.fillStyle = "blue"
+      ctx.fill();
+      ctx.closePath();
+
+      
+      
+    }
+
+   
+    function update() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      draw();
+
+      requestAnimationFrame(update);
+    }
+
+
+    update();
+    
+    
+    canvas.addEventListener('touchstart', function (e) {
+const touchX = e.touches[0].clientX - canvas.offsetLeft;
+const touchY = e.touches[0].clientY - canvas.offsetTop;
+if (touchX >= 50 && touchX <= 50 + 60 &&
+touchY >= 50 && touchY <= 50 + 40 ) {
+alert("0")
+}
+});
+
+
+
+  </script>
+</body>
 </html>
