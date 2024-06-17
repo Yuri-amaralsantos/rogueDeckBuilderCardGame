@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakout Game</title>
+  <style>
+    canvas {
+      display: block;
+      margin: auto;
+      background: #eee;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <canvas id="breakoutCanvas"></canvas>
+  
+  
+
+  <script>
+
+const canvas = document.getElementById("breakoutCanvas");
+    canvas.width = 300
+    canvas.height =500
+    const ctx = canvas.getContext("2d");
+
+let hand=[0,1,2]
+let handPos=[50, 110, 170]
+
+let texto = ""
+
+
+
+    function draw (){
+      for (i in hand){
+    ctx.beginPath();
+      ctx.rect(handPos[i], 400, 50, 70);
+      ctx.fillStyle = "blue"
+      ctx.fill();
+      ctx.closePath();
+      }
+
+      ctx.font = '14px Arial';
+      ctx.fillStyle = 'black';
+      ctx.fillText(texto, 50, 100)
+      
+    }
+
+   
+    function update() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      draw();
+
+      requestAnimationFrame(update);
+    }
+
+
+    update();
+    
+    
+    
+    
+    canvas.addEventListener('touchstart', function (e) {
+const touchX = e.touches[0].clientX - canvas.offsetLeft;
+const touchY = e.touches[0].clientY - canvas.offsetTop;
+for(i in hand){
+if (touchX >= handPos[i] && touchX <= handPos[i] + 50 &&
+touchY >= 400 && touchY <= 400 + 70 ) {
+texto = hand[i]
+break
+}
+}
+});
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
