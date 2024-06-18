@@ -23,6 +23,7 @@ function pass(){
     turn="bot"
   } else{
     turn="player"
+    hand=deck
   }
 }
 
