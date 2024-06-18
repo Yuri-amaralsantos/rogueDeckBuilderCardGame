@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,89 +11,19 @@
       margin: auto;
       background: #eee;
     }
-
-
-
   </style>
 </head>
+
 <body>
 
   <canvas id="breakoutCanvas"></canvas>
-  
+
   <script src="./data.js"> </script>
-    <script src="./player.js"> </script>
-      <script src="./main.js"> </script>
-
-  <script>
-  
-
-const canvas = document.getElementById("breakoutCanvas");
-    canvas.width = 300
-    canvas.height =500
-    const ctx = canvas.getContext("2d");
-
-let hand=["strike","strike","block"]
-let handPos=[50, 110, 170]
+  <script src="./player.js"> </script>
+  <script src="./interface.js"> </script>
+  <script src="./main.js"> </script>
 
 
-
-
-let texto = ""
-
-
-
-    function draw (){
-      for (i in hand){
-    ctx.beginPath();
-      ctx.rect(handPos[i], 400, 50, 70);
-      ctx.fillStyle = "green"
-      ctx.fill();
-      ctx.closePath();
-      
-      ctx.font = '14px Arial';
-      ctx.fillStyle = 'black';
-      ctx.fillText(hand[i], handPos[i] +10, 420)
-      }
-
-      ctx.font = '14px Arial';
-      ctx.fillStyle = 'black';
-      ctx.fillText(texto, 50, 100)
-      
-    }
-
-   
-    function update() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      draw();
-
-      requestAnimationFrame(update);
-    }
-
-
-    update();
-    
-    
-    
-    
-    canvas.addEventListener('touchstart', function (e) {
-const touchX = e.touches[0].clientX - canvas.offsetLeft;
-const touchY = e.touches[0].clientY - canvas.offsetTop;
-for(i in hand){
-if (touchX >= handPos[i] && touchX <= handPos[i] + 50 &&
-touchY >= 400 && touchY <= 400 + 70 ) {
-texto = hand[i]
-hand.splice(i,1)
-break
-}
-}
-});
-
-
-
-
-
-
-
-  </script>
 </body>
+
 </html>
