@@ -39,6 +39,13 @@ canvas.addEventListener('touchstart', function(e) {
       break
     }
   }
+  for (i in bots) {
+    if (touchX >= botPos[i] && touchX <= botPos[i] + 60 &&
+      touchY >= 90 && touchY <= 90 + 30) {
+      p1.target = i
+      break
+    }
+  }
   }
   if (touchX >= 230 && touchX <= 240 + 60 &&
     touchY >= 230 && touchY <= 230 + 30) {
