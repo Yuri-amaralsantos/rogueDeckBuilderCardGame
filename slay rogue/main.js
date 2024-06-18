@@ -31,4 +31,13 @@ canvas.addEventListener('touchstart', function(e) {
       break
     }
   }
+  if (touchX >= 230 && touchX <= 240 + 60 &&
+    touchY >= 230 && touchY <= 230 + 30) {
+    alert("pass")
+  }
+  else if (touchX >= 100 && touchX <= 100 + 50 &&
+      touchY >= 90 && touchY <= 90 + 20) {
+      alert("mob")
+  }
 });
+
