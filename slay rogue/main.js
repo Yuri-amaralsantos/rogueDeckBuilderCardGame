@@ -8,7 +8,16 @@ function update() {
 
 update();
 
+function play(x){
+  if(x=="strike"){
+    mob1.hp-=5
+  }
+  else if(x=="block"){
+    p1.hp+=5
+  }
 
+
+}
 
 
 canvas.addEventListener('touchstart', function(e) {
@@ -17,7 +26,7 @@ canvas.addEventListener('touchstart', function(e) {
   for (i in hand) {
     if (touchX >= handPos[i] && touchX <= handPos[i] + 50 &&
       touchY >= 400 && touchY <= 400 + 70) {
-      texto = hand[i]
+      play(hand[i])
       hand.splice(i, 1)
       break
     }

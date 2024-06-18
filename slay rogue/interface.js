@@ -13,6 +13,9 @@ function draw() {
 
       ctx.font = '14px Arial';
       ctx.fillStyle = 'black';
-      ctx.fillText(texto, 50, 100)
+
+      
+      ctx.fillText("player "+p1.hp, 100, 300)
+      ctx.fillText("mob "+mob1.hp, 100, 100)
 
     }
