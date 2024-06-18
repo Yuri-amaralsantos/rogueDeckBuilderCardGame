@@ -11,7 +11,7 @@ update();
 function play(x){
   
   if(x=="strike"){
-    mob1.hp-=5
+    bots[p1.target].hp-=5
   }
   else if(x=="block"){
     p1.hp+=5

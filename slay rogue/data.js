@@ -3,8 +3,8 @@ const canvas = document.getElementById("breakoutCanvas");
     canvas.height =500
     const ctx = canvas.getContext("2d");
 
-let hand=["strike","strike","block"]
-let handPos=[50, 110, 170]
+let hand=["strike","strike","block", "block"]
+let handPos=[30, 90, 150, 210]
 
 
 

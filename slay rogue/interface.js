@@ -12,6 +12,19 @@ function draw() {
         ctx.fillText(hand[i], handPos[i] + 10, 420)
       }
       
+      for (i in bots) {
+        ctx.beginPath();
+        ctx.rect(botPos[i], 90, 60, 30);
+        ctx.fillStyle = "red"
+        ctx.fill();
+        ctx.closePath();
+      
+        ctx.font = '14px Arial';
+        ctx.fillStyle = 'black';
+        ctx.fillText("mob", botPos[i] + 10, 90)
+        ctx.fillText("hp:" + bots[i].hp, botPos[i] + 10, 130)
+      }
+      
       //pass
       ctx.beginPath();
       ctx.rect(230, 230, 60, 30);
@@ -19,12 +32,7 @@ function draw() {
       ctx.fill();
       ctx.closePath();
       
-      //mobs
-      ctx.beginPath();
-      ctx.rect(100, 90, 60, 30 );
-      ctx.fillStyle = "orange"
-      ctx.fill();
-      ctx.closePath();
+
 
       ctx.font = '14px Arial';
       ctx.fillStyle = 'black';
@@ -38,8 +46,6 @@ function draw() {
       //hp player
       ctx.fillText("player "+p1.hp, 100, 300)
       
-      //hp mobs
-      ctx.fillText("mob "+mob1.hp, 100, 90)
 
 
     }
