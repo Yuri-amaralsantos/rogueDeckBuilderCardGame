@@ -8,5 +8,5 @@ let handPos=[50, 110, 170]
 
 
 
-
+turn="player"
 let texto = ""

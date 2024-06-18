@@ -9,20 +9,28 @@ function update() {
 update();
 
 function play(x){
+  
   if(x=="strike"){
     mob1.hp-=5
   }
   else if(x=="block"){
     p1.hp+=5
   }
+}
 
-
+function pass(){
+  if(turn=="player"){
+    turn="bot"
+  } else{
+    turn="player"
+  }
 }
 
 
 canvas.addEventListener('touchstart', function(e) {
   const touchX = e.touches[0].clientX - canvas.offsetLeft;
   const touchY = e.touches[0].clientY - canvas.offsetTop;
+  if(turn=="player"){
   for (i in hand) {
     if (touchX >= handPos[i] && touchX <= handPos[i] + 50 &&
       touchY >= 400 && touchY <= 400 + 70) {
@@ -31,12 +39,13 @@ canvas.addEventListener('touchstart', function(e) {
       break
     }
   }
+  }
   if (touchX >= 230 && touchX <= 240 + 60 &&
     touchY >= 230 && touchY <= 230 + 30) {
-    alert("pass")
+    pass()
   }
-  else if (touchX >= 100 && touchX <= 100 + 50 &&
-      touchY >= 90 && touchY <= 90 + 20) {
+  else if (touchX >= 100 && touchX <= 100 + 60 &&
+      touchY >= 90 && touchY <= 90 + 30) {
       alert("mob")
   }
 });
