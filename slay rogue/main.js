@@ -1,6 +1,6 @@
 function update() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  draw();
+  updateUi();
 
   requestAnimationFrame(update);
 }
@@ -10,20 +10,35 @@ update();
 
 function play(x){
   
-  if(x=="strike"){
+  if(x.title=="strike"){
     bots[p1.target].hp-=5
   }
-  else if(x=="block"){
+  else if(x.title=="block"){
     p1.hp+=5
   }
+}
+
+function draw(x) {
+  
+  for (let i = 0; i < x; i++) {
+    
+    if (deck.length == 0) {
+      deck = discard
+    }
+    
+    hand.push(deck[0])
+   deck.splice(0, 1)
+  }
+  
 }
 
 function pass(){
   if(turn=="player"){
     turn="bot"
+    pass()
   } else{
     turn="player"
-    hand=deck
+    draw(4)
   }
 }
 
@@ -36,6 +51,7 @@ canvas.addEventListener('touchstart', function(e) {
     if (touchX >= handPos[i] && touchX <= handPos[i] + 50 &&
       touchY >= 400 && touchY <= 400 + 70) {
       play(hand[i])
+      discard.push(hand[i])
       hand.splice(i, 1)
       break
     }
@@ -57,4 +73,3 @@ canvas.addEventListener('touchstart', function(e) {
       alert("mob")
   }
 });
-

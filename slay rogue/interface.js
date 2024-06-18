@@ -1,4 +1,4 @@
-function draw() {
+function updateUi() {
   //hand
   for (i in hand) {
     ctx.beginPath();
@@ -9,7 +9,7 @@ function draw() {
 
     ctx.font = '14px Arial';
     ctx.fillStyle = 'black';
-    ctx.fillText(hand[i], handPos[i] + 10, 420)
+    ctx.fillText(hand[i].title, handPos[i] + 10, 420)
   }
 
   for (i in bots) {
