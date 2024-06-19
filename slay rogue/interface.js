@@ -1,6 +1,6 @@
 function updateUi() {
   //hand
-  for (i in hand) {
+  for (let i in hand) {
     ctx.beginPath();
     ctx.rect(handPos[i], 400, 50, 70);
     ctx.fillStyle = "green"
@@ -12,7 +12,7 @@ function updateUi() {
     ctx.fillText(hand[i].title, handPos[i] + 10, 420)
   }
 
-  for (i in bots) {
+  for (let i in bots) {
     ctx.beginPath();
     ctx.rect(botPos[i], 90, 60, 30);
     if (p1.target == i) {
