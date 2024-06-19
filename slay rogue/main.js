@@ -64,11 +64,12 @@ canvas.addEventListener('touchstart', function(e) {
     for (let i in hand) {
       if (touchX >= handPos[i] && touchX <= handPos[i] + 50 &&
         touchY >= 400 && touchY <= 400 + 70) {
-        if(p1.mana < hand[i].cost)
+        if(p1.mana >= hand[i].cost){
         play(hand[i])
         p1.mana-=hand[i].cost
         discard.push(hand[i])
         hand.splice(i, 1)
+        }
         break
       }
     }
