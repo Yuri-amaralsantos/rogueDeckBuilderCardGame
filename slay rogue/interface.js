@@ -1,15 +1,15 @@
 function updateUi() {
   //hand
   for (let i in hand) {
-    ctx.beginPath();
-    ctx.rect(handPos[i], 400, 50, 70);
     ctx.fillStyle = "green"
-    ctx.fill();
-    ctx.closePath();
+    ctx.strokeStyle = '#000';
+    ctx.lineWidth = 2;
+    ctx.fillRect(handPos[i], 490, 50, 50)
+    ctx.strokeRect(handPos[i], 490, 50, 50);
 
     ctx.font = '14px Arial';
     ctx.fillStyle = 'white';
-    ctx.fillText(hand[i].title, handPos[i] + 10, 420)
+    ctx.fillText(hand[i].title, handPos[i] + 10, 510)
   }
 
   for (let i in bots) {
@@ -32,7 +32,7 @@ function updateUi() {
 
   //pass
   ctx.beginPath();
-  ctx.rect(230, 230, 60, 30);
+  ctx.rect(310, 230, 60, 30);
   ctx.fillStyle = "orange"
   ctx.fill();
   ctx.closePath();
@@ -43,14 +43,13 @@ function updateUi() {
   ctx.fillStyle = 'black';
 
   //button pass
-  ctx.fillText("pass", 245, 250)
+  ctx.fillText("pass", 325, 250)
 
-  //ui turn
-  ctx.fillText("turn " + turn, 30, 30)
+  
 
   //hp player
-  ctx.fillText("player hp:" + p1.hp, 100, 300)
-  ctx.fillText("mana: " + p1.mana, 100, 320)
+  ctx.fillText("player hp:" + p1.hp, 30, 450)
+  ctx.fillText("mana: " + p1.mana, 30, 470)
 
 
 

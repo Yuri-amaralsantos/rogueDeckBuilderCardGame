@@ -17,4 +17,4 @@ let mob2 = new Bot()
 
 
 let bots = [{...mob1}, {...mob1}, {...mob2}]
-let botPos=[50, 120, 190]
+let botPos=[50, 160, 270]

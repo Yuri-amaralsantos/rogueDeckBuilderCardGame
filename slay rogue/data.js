@@ -1,6 +1,6 @@
 const canvas = document.getElementById("breakoutCanvas");
-    canvas.width = 300
-    canvas.height =500
+    canvas.width = 380
+    canvas.height =600
     const ctx = canvas.getContext("2d");
 
 
@@ -14,7 +14,7 @@ let c3 ={title:"atk2", cost:2, damage: 10}
 let deck = [{...c1},{...c1},{...c1},{...c1},{...c1},{...c2},{...c2},{...c2},{...c2},{...c3}]
 let hand =  []
 let discard=[]
-let handPos=[30, 90, 150, 210]
+let handPos=[10, 60, 110, 160]
 
 
 

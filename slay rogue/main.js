@@ -18,7 +18,7 @@ function shuffleArray(array) {
 
 
 
-function start(){
+function start() {
   shuffleArray(deck)
   draw(4)
 }
@@ -37,8 +37,8 @@ function play(x) {
   }
 }
 
-function botPlay(){
-  
+function botPlay() {
+
 }
 
 function draw(x) {
@@ -59,13 +59,13 @@ function draw(x) {
 function pass() {
   if (turn == "player") {
     turn = "bot"
-    for(let i in bots){
-      p1.hp-=5
+    for (let i in bots) {
+      p1.hp -= 5
     }
     pass()
   } else {
     turn = "player"
-    p1.mana=3
+    p1.mana = 3
     let x = hand.length
     for (let i = 0; i < x; i++) {
       discard.push(hand[0])
@@ -80,18 +80,17 @@ function pass() {
 canvas.addEventListener('touchstart', function(e) {
   const touchX = e.touches[0].clientX - canvas.offsetLeft;
   const touchY = e.touches[0].clientY - canvas.offsetTop;
-  if (turn == "player") {
-    for (let i in hand) {
-      if (touchX >= handPos[i] && touchX <= handPos[i] + 50 &&
-        touchY >= 400 && touchY <= 400 + 70) {
-        if(p1.mana >= hand[i].cost){
+  for (let i in hand) {
+    if (touchX >= handPos[i] && touchX <= handPos[i] + 50 &&
+      touchY >= 490 && touchY <= 490 + 50) {
+      if (p1.mana >= hand[i].cost) {
         play(hand[i])
-        p1.mana-=hand[i].cost
+        p1.mana -= hand[i].cost
         discard.push(hand[i])
         hand.splice(i, 1)
-        }
-        break
       }
+      break
+
     }
     for (let i in bots) {
       if (touchX >= botPos[i] && touchX <= botPos[i] + 60 &&
