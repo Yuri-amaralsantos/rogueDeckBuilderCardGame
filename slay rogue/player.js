@@ -1,4 +1,5 @@
 class Player{
+  mana= 3
   hp=30
   target=0
 }

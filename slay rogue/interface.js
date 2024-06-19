@@ -49,7 +49,8 @@ function updateUi() {
   ctx.fillText("turn " + turn, 30, 30)
 
   //hp player
-  ctx.fillText("player " + p1.hp, 100, 300)
+  ctx.fillText("player hp:" + p1.hp, 100, 300)
+  ctx.fillText("mana: " + p1.mana, 100, 320)
 
 
 

@@ -10,14 +10,14 @@ update();
 
 function play(x) {
 
-  if (x.title == "strike") {
-    bots[p1.target].hp -= 5
+  if (x.damage) {
+    bots[p1.target].hp -= x.damage
     if (bots[p1.target].hp < 1) {
       bots.splice([p1.target], 1)
     }
   }
-  else if (x.title == "block") {
-    p1.hp += 5
+  else if (x.block) {
+    p1.hp += x.block
   }
 }
 
@@ -45,6 +45,7 @@ function pass() {
     pass()
   } else {
     turn = "player"
+    p1.mana=3
     let x = hand.length
     for (let i = 0; i < x; i++) {
       discard.push(hand[0])
@@ -63,7 +64,9 @@ canvas.addEventListener('touchstart', function(e) {
     for (let i in hand) {
       if (touchX >= handPos[i] && touchX <= handPos[i] + 50 &&
         touchY >= 400 && touchY <= 400 + 70) {
+        if(p1.mana < hand[i].cost)
         play(hand[i])
+        p1.mana-=hand[i].cost
         discard.push(hand[i])
         hand.splice(i, 1)
         break
