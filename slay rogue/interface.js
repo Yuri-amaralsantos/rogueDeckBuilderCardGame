@@ -8,7 +8,7 @@ function updateUi() {
     ctx.closePath();
 
     ctx.font = '14px Arial';
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = 'white';
     ctx.fillText(hand[i].title, handPos[i] + 10, 420)
   }
 
