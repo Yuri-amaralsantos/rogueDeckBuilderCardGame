@@ -7,6 +7,8 @@ let p1 = new Player()
 
 class  Bot{
   hp=10
+  actions=[]
+  actionChoosed="attack"
 }
 
 let mob1 = new Bot()
