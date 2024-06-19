@@ -21,6 +21,10 @@ function play(x) {
   }
 }
 
+function botPlay(){
+  
+}
+
 function draw(x) {
 
   for (let i = 0; i < x; i++) {
@@ -40,7 +44,7 @@ function pass() {
   if (turn == "player") {
     turn = "bot"
     for(let i in bots){
-      p1.hp-=10
+      p1.hp-=5
     }
     pass()
   } else {
