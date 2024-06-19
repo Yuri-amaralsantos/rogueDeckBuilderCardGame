@@ -10,8 +10,8 @@ class Card{
 let c1 ={title:"strike", cost:1, damage:5}
 let c2 ={title:"block", cost:1, block: 5}
 
-let deck = [{...c1},{...c1},{...c2},{...c2}]
-let hand =  [{...c1},{...c1},{...c2},{...c2}]
+let deck = [{...c1},{...c1},{...c2},{...c2}, {...c1},{...c1},{...c2},{...c2}]
+let hand =  []
 let discard=[]
 let handPos=[30, 90, 150, 210]
 
