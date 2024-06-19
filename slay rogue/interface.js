@@ -4,12 +4,16 @@ function updateUi() {
     ctx.fillStyle = "green"
     ctx.strokeStyle = '#000';
     ctx.lineWidth = 2;
-    ctx.fillRect(handPos[i], 490, 50, 50)
-    ctx.strokeRect(handPos[i], 490, 50, 50);
+    ctx.fillRect(handPos[i], 490, 58, 80)
+    ctx.strokeRect(handPos[i], 490, 58, 80);
 
-    ctx.font = '14px Arial';
+    ctx.font = '11px Arial';
     ctx.fillStyle = 'white';
-    ctx.fillText(hand[i].title, handPos[i] + 10, 510)
+    ctx.fillText(hand[i].cost, handPos[i] + 10, 510)
+    ctx.fillText(hand[i].t1, handPos[i] + 10, 530)
+    if(hand[i].t2){
+       ctx.fillText(hand[i].t2, handPos[i] + 10, 550)
+    }
   }
 
   for (let i in bots) {
