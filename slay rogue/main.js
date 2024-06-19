@@ -39,6 +39,9 @@ function draw(x) {
 function pass() {
   if (turn == "player") {
     turn = "bot"
+    for(let i in bots){
+      p1.hp-=10
+    }
     pass()
   } else {
     turn = "player"
