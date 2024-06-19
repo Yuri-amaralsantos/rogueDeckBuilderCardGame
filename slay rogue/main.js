@@ -12,6 +12,9 @@ function play(x){
   
   if(x.title=="strike"){
     bots[p1.target].hp-=5
+   if(bots[p1.target].hp<1){
+      bots.splice([p1.target],1)
+    }
   }
   else if(x.title=="block"){
     p1.hp+=5
@@ -32,12 +35,17 @@ function draw(x) {
   
 }
 
+
 function pass(){
   if(turn=="player"){
     turn="bot"
     pass()
   } else{
     turn="player"
+    for(i in hand){
+      discard.push(hand[i])
+      hand.splice(i, 1)
+    }
     draw(4)
   }
 }
@@ -70,6 +78,6 @@ canvas.addEventListener('touchstart', function(e) {
   }
   else if (touchX >= 100 && touchX <= 100 + 60 &&
       touchY >= 90 && touchY <= 90 + 30) {
-      alert("mob")
+      p1.targrt
   }
 });

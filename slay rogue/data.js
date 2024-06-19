@@ -3,6 +3,10 @@ const canvas = document.getElementById("breakoutCanvas");
     canvas.height =500
     const ctx = canvas.getContext("2d");
 
+
+class Card{
+  
+}
 let c1 ={title:"strike"}
 let c2 ={title:"block"}
 
