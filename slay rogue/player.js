@@ -1,6 +1,7 @@
 class Player{
   mana= 3
   hp=30
+  armor=0
   target=0
 }
 
@@ -12,7 +13,8 @@ class  Bot{
   
   }
   hp = 10
-  actionList = [{...a1},{...a2}]
+  armor=0
+  actionList = [{...a1},{...a2}, {...a3}]
   action=""
   choose = function(){
     let r  = rng(0,this.actionList.length-1)

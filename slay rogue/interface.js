@@ -30,7 +30,7 @@ function updateUi() {
     ctx.font = '14px Arial';
     ctx.fillStyle = 'black';
     ctx.fillText(bots[i].name, botPos[i] + 10, 90)
-    ctx.fillText("hp:" + bots[i].hp, botPos[i] + 10, 130)
+    ctx.fillText("hp:" + bots[i].hp +"+"+bots[i].armor, botPos[i] + 10, 130)
     ctx.fillText(bots[i].action.t1, botPos[i] + 10, 150)
   }
 
@@ -52,7 +52,7 @@ function updateUi() {
   
 
   //hp player
-  ctx.fillText("player hp:" + p1.hp, 30, 450)
+  ctx.fillText("player hp:" + p1.hp+"+"+p1.armor, 30, 450)
   ctx.fillText("mana: " + p1.mana, 30, 470)
 
 
