@@ -66,6 +66,9 @@ function pass() {
   } else {
     turn = "player"
     p1.mana = 3
+    for (let i in bots) {
+      bots[i].choose()
+    }
     let x = hand.length
     for (let i = 0; i < x; i++) {
       discard.push(hand[0])
