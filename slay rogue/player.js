@@ -12,11 +12,11 @@ class  Bot{
   
   }
   hp = 10
-  actions = ["atk","def", "weak"]
-  actionChoosed=""
+  actionList = [{...a1},{...a2}]
+  action=""
   choose = function(){
-    let r  = rng(0,this.actions.length-1)
-    this.actionChoosed = this.actions[r]
+    let r  = rng(0,this.actionList.length-1)
+    this.action = this.actionList[r]
   }
 }
 

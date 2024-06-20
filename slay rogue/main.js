@@ -35,14 +35,18 @@ function play(x) {
       bots.splice([p1.target], 1)
     }
   }
-  else if (x.block) {
+  if (x.block) {
     p1.hp += x.block
   }
 }
 
 function botPlay(x) {
-console.log(x)
-console.log(mob1)
+if(x.action.damage){
+  p1.hp-=x.action.damage
+}
+if(x.action.block){
+  x.hp+=x.action.block
+}
 
 }
 

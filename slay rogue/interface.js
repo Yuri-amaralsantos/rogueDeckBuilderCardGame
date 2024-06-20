@@ -31,7 +31,7 @@ function updateUi() {
     ctx.fillStyle = 'black';
     ctx.fillText(bots[i].name, botPos[i] + 10, 90)
     ctx.fillText("hp:" + bots[i].hp, botPos[i] + 10, 130)
-    ctx.fillText(bots[i].actionChoosed, botPos[i] + 10, 150)
+    ctx.fillText(bots[i].action.t1, botPos[i] + 10, 150)
   }
 
   //pass

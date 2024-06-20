@@ -11,6 +11,9 @@ let c1 ={t1:"strike", cost:1, damage:5}
 let c2 ={t1:"block", cost:1, block: 5}
 let c3 ={t1:"heavy", t2:"strike", cost:2, damage: 10}
 
+let a1={t1:"atk",damage:5}
+let a2={t1:"def",block:5}
+
 let deck = [{...c1},{...c1},{...c1},{...c1},{...c1},{...c2},{...c2},{...c2},{...c2},{...c3}]
 let hand =  []
 let discard=[]
