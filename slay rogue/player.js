@@ -7,13 +7,18 @@ class Player{
 let p1 = new Player()
 
 class  Bot{
-  hp=10
-  actions=[]
+  constructor(name){
+  this.name=name
+  
+  }
+  hp = 10
+  actions = []
   actionChoosed="attack"
+  
 }
 
-let mob1 = new Bot()
-let mob2 = new Bot()
+let mob1 = new Bot("mob1")
+let mob2 = new Bot("mob2")
 
 
 let bots = [{...mob1}, {...mob1}, {...mob2}]

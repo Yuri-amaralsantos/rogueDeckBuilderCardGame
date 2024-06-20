@@ -29,7 +29,7 @@ function updateUi() {
 
     ctx.font = '14px Arial';
     ctx.fillStyle = 'black';
-    ctx.fillText("mob", botPos[i] + 10, 90)
+    ctx.fillText(bots[i].name, botPos[i] + 10, 90)
     ctx.fillText("hp:" + bots[i].hp, botPos[i] + 10, 130)
     ctx.fillText(bots[i].actionChoosed, botPos[i] + 10, 150)
   }

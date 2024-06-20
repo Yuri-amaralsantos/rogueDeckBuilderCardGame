@@ -81,8 +81,8 @@ canvas.addEventListener('touchstart', function(e) {
   const touchX = e.touches[0].clientX - canvas.offsetLeft;
   const touchY = e.touches[0].clientY - canvas.offsetTop;
   for (let i in hand) {
-    if (touchX >= handPos[i] && touchX <= handPos[i] + 50 &&
-      touchY >= 490 && touchY <= 490 + 50) {
+    if (touchX >= handPos[i] && touchX <= handPos[i] + 58 &&
+      touchY >= 490 && touchY <= 490 + 80) {
       if (p1.mana >= hand[i].cost) {
         play(hand[i])
         p1.mana -= hand[i].cost
