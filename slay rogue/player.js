@@ -12,7 +12,7 @@ class  Bot{
   
   }
   hp = 10
-  actions = []
+  actions = [0,1,2]
   actionChoosed="attack"
   
 }
@@ -20,6 +20,8 @@ class  Bot{
 let mob1 = new Bot("mob1")
 let mob2 = new Bot("mob2")
 
+test= rng(0,mob1.actions.length-1)
+console.log(test)
 
 let bots = [{...mob1}, {...mob1}, {...mob2}]
 let botPos=[50, 160, 270]

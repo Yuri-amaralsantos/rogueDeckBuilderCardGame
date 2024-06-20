@@ -20,3 +20,8 @@ let handPos=[10, 68, 126, 184, 242, 300]
 
 turn="player"
 let texto = ""
+
+function rng(min, max) {
+  let value = Math.floor(Math.random() * (max +1)) + min
+  return value
+}
