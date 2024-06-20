@@ -21,6 +21,9 @@ function shuffleArray(array) {
 function start() {
   shuffleArray(deck)
   draw(4)
+  for (let i in bots) {
+    bots[i].choose()
+  }
 }
 start()
 
@@ -37,7 +40,9 @@ function play(x) {
   }
 }
 
-function botPlay() {
+function botPlay(x) {
+console.log(x)
+console.log(mob1)
 
 }
 
@@ -60,7 +65,7 @@ function pass() {
   if (turn == "player") {
     turn = "bot"
     for (let i in bots) {
-      p1.hp -= 5
+      botPlay(bots[i])
     }
     pass()
   } else {
@@ -74,7 +79,7 @@ function pass() {
       discard.push(hand[0])
       hand.splice(0, 1)
     }
-    console.log(hand)
+    
     draw(4)
   }
 }

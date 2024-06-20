@@ -12,10 +12,11 @@ class  Bot{
   
   }
   hp = 10
-  actions = [0,1,2]
-  actionChoosed="attack"
-  choose(){
-    this.actionChoosed = rng(0,this.actions.length-1)
+  actions = ["atk","def", "weak"]
+  actionChoosed=""
+  choose = function(){
+    let r  = rng(0,this.actions.length-1)
+    this.actionChoosed = this.actions[r]
   }
 }
 
@@ -25,4 +26,6 @@ let mob2 = new Bot("mob2")
 
 
 let bots = [{...mob1}, {...mob1}, {...mob2}]
+
+bots[0].choose()
 let botPos=[50, 160, 270]
