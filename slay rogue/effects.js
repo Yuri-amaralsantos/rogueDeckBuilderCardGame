@@ -1,4 +1,4 @@
-function playEffect(cast, ctg, x){
+function playEffect(cast, tg, x) {
   if (x.damage) {
     if (tg.armor > 0) {
       let temp = x.damage
@@ -15,13 +15,12 @@ function playEffect(cast, ctg, x){
     else {
       tg.hp -= x.damage
     }
-    /*
-    if(cast=="p1"){
-    if (bots[p1.target].hp < 1) {
-      bots.splice([p1.target], 1)
+    if (turn == "player") {
+      if (bots[p1.target].hp < 1) {
+        bots.splice(p1.target, 1)
+      }
     }
-    }
-    */
+
   }
   if (x.block) {
     cast.armor += x.block

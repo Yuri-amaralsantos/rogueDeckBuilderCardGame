@@ -29,7 +29,7 @@ start()
 
 
 
-}
+
 
 function draw(x) {
 
@@ -79,7 +79,7 @@ canvas.addEventListener('touchstart', function(e) {
     if (touchX >= handPos[i] && touchX <= handPos[i] + 58 &&
       touchY >= 490 && touchY <= 490 + 80) {
       if (p1.mana >= hand[i].cost) {
-        play(hand[i])
+        playEffect(p1, bots[p1.target], hand[i])
         p1.mana -= hand[i].cost
         discard.push(hand[i])
         hand.splice(i, 1)
