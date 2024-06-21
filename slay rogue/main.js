@@ -29,17 +29,23 @@ start()
 
 
 function play(x) {
-let tg = bots[p1.target]
+  let tg = bots[p1.target]
   if (x.damage) {
     if (tg.armor > 0) {
       let temp = x.damage
-      x.damage -= tg.armor
-      tg.armor -= temp
-      if(tg.armor<0){
-        tg.armor=0
+      temp -= tg.armor
+      tg.armor -= x.damage
+      if (temp < 0) {
+        temp = 0
       }
+      if (tg.armor < 0) {
+        tg.armor = 0
+      }
+      tg.hp -= temp
     }
-    tg.hp -= x.damage
+    else {
+      tg.hp -= x.damage
+    }
     if (bots[p1.target].hp < 1) {
       bots.splice([p1.target], 1)
     }
@@ -50,20 +56,24 @@ let tg = bots[p1.target]
 }
 
 function botPlay(x) {
-if(x.action.damage){
-  if(p1.armor>0){
-    let temp = x.action.damage
-    x.action.damage -= p1.armor
-    p1.armor -= temp
-    if(p1.armor<0){
-    p1.armor=0
+  if (x.action.damage) {
+
+    if (p1.armor > 0) {
+      let temp = x.action.damage
+      temp -= p1.armor
+      p1.armor -= x.action.damage
+      if (temp < 0) {
+        temp = 0
+      }
+      p1.hp -= temp
     }
-  } 
-  p1.hp-=x.action.damage
-}
-if(x.action.block){
-  x.armor+=x.action.block
-}
+    else {
+      p1.hp -= x.action.damage
+    }
+  }
+  if (x.action.block) {
+    x.armor += x.action.block
+  }
 
 }
 
@@ -86,13 +96,13 @@ function pass() {
   if (turn == "player") {
     turn = "bot"
     for (let i in bots) {
-      bots[i].armor=0
+      bots[i].armor = 0
       botPlay(bots[i])
     }
     pass()
   } else {
     turn = "player"
-    p1.armor=0
+    p1.armor = 0
     p1.mana = 3
     for (let i in bots) {
       bots[i].choose()
@@ -102,7 +112,7 @@ function pass() {
       discard.push(hand[0])
       hand.splice(0, 1)
     }
-    
+
     draw(4)
   }
 }
