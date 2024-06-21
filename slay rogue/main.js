@@ -28,52 +28,6 @@ function start() {
 start()
 
 
-function play(x) {
-  let tg = bots[p1.target]
-  if (x.damage) {
-    if (tg.armor > 0) {
-      let temp = x.damage
-      temp -= tg.armor
-      tg.armor -= x.damage
-      if (temp < 0) {
-        temp = 0
-      }
-      if (tg.armor < 0) {
-        tg.armor = 0
-      }
-      tg.hp -= temp
-    }
-    else {
-      tg.hp -= x.damage
-    }
-    if (bots[p1.target].hp < 1) {
-      bots.splice([p1.target], 1)
-    }
-  }
-  if (x.block) {
-    p1.armor += x.block
-  }
-}
-
-function botPlay(x) {
-  if (x.action.damage) {
-
-    if (p1.armor > 0) {
-      let temp = x.action.damage
-      temp -= p1.armor
-      p1.armor -= x.action.damage
-      if (temp < 0) {
-        temp = 0
-      }
-      p1.hp -= temp
-    }
-    else {
-      p1.hp -= x.action.damage
-    }
-  }
-  if (x.action.block) {
-    x.armor += x.action.block
-  }
 
 }
 
@@ -97,7 +51,7 @@ function pass() {
     turn = "bot"
     for (let i in bots) {
       bots[i].armor = 0
-      botPlay(bots[i])
+      playEffect(bots[i], p1, bots[i].action)
     }
     pass()
   } else {
