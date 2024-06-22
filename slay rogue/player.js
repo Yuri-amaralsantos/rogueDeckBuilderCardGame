@@ -1,8 +1,12 @@
+
+
 class Player{
   mana= 3
   hp=30
   armor=0
   target=0
+  vulnerable=1
+  weak=1
 }
 
 let p1 = new Player()
@@ -12,8 +16,10 @@ class  Bot{
   this.name=name
   
   }
-  hp = 10
+  hp = 20
   armor=0
+  vulnerable = 1
+  weak = 1
   actionList = [{...a1},{...a2}, {...a3}]
   action=""
   choose = function(){

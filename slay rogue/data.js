@@ -7,7 +7,7 @@ const canvas = document.getElementById("canvas");
 class Card{
   
 }
-let c1 ={t1:"strike", cost:1, damage:5}
+let c1 ={t1:"strike", cost:1, damage:5, vulnerable:1, weak:1}
 let c2 ={t1:"block", cost:1, block: 5}
 let c3 ={t1:"heavy", t2:"strike", cost:2, damage: 10}
 
