@@ -7,13 +7,15 @@ const canvas = document.getElementById("canvas");
 class Card{
   
 }
-let c1 ={t1:"strike", cost:1, damage:5, vulnerable:1, weak:1}
+let c1 ={t1:"strike", cost:1, damage:5
+}
 let c2 ={t1:"block", cost:1, block: 5}
-let c3 ={t1:"heavy", t2:"strike", cost:2, damage: 10}
+let c3 ={t1:"heavy", t2:"strike", cost:2, damage: 8, vulnerable:2}
 
 let a1={t1:"atk",damage:5}
 let a2={t1:"def",block:5}
 let a3={t1:"atk/def", damage:3, block:3}
+let a4={t1:"weak",weak:2}
 
 let deck = [{...c1},{...c1},{...c1},{...c1},{...c1},{...c2},{...c2},{...c2},{...c2},{...c3}]
 let hand =  []

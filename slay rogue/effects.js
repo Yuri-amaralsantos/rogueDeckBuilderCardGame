@@ -1,5 +1,6 @@
 function playEffect(cast, tg, x) {
   if (x.damage) {
+
     let dmg
     if (tg.armor > 0) {
       let temp = x.damage
@@ -16,7 +17,14 @@ function playEffect(cast, tg, x) {
     else {
       dmg = x.damage
     }
-    tg.hp-=Math.round(dmg*tg.vulnerable*cast.weak
+    if(tg.vulnerable>1){
+      dmg*=1.5
+    }
+    if(cast.weak>1){
+      dmg*=0.5
+    }
+    console.log(dmg)
+    tg.hp-=Math.round(dmg)
     if (turn == "player") {
       if (bots[p1.target].hp < 1) {
         bots.splice(p1.target, 1)
@@ -28,9 +36,9 @@ function playEffect(cast, tg, x) {
     cast.armor += x.block
   }
   if(x.vulnerable){
-    tg.vulnerable=1.5
+    tg.vulnerable=x.vulnerable
   }
   if(x.weak){
-    tg.weak=0.25
+    tg.weak=x.weak
   }
 }

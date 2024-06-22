@@ -48,20 +48,21 @@ function draw(x) {
 
 function pass() {
   if (turn == "player") {
+    p1.vulnerable = -1
+    p1.weak = -1
     turn = "bot"
     for (let i in bots) {
       bots[i].armor = 0
-      bots[i].vulnerable = 1
-      bots[i].weak = 1
       playEffect(bots[i], p1, bots[i].action)
+      bots[i].vulnerable -= 1
+      bots[i].weak -= 1
     }
     pass()
   } else {
     turn = "player"
     p1.armor = 0
     p1.mana = 3
-    p1.vulnerable=1
-    p1.weak=1
+    
     for (let i in bots) {
       bots[i].choose()
     }
