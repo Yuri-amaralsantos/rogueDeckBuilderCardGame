@@ -21,7 +21,7 @@ function playEffect(cast, tg, x) {
       dmg*=1.5
     }
     if(cast.weak>1){
-      dmg*=0.66
+      dmg*=0.7
     }
     console.log(dmg)
     tg.hp-=Math.round(dmg)
