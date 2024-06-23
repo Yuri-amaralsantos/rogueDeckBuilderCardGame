@@ -25,3 +25,10 @@ function update() {
 
 
 update()
+
+canvas.addEventListener('touchstart', function(e) {
+  const touchX = e.touches[0].clientX - canvas.offsetLeft;
+  const touchY = e.touches[0].clientY - canvas.offsetTop;
+  console.log(touchX)
+
+});
