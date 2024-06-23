@@ -2,6 +2,8 @@ const canvas = document.getElementById("canvas");
 
 const ctx = canvas.getContext("2d");
 
+let grid=[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+
 function updateUi() {
 
   ctx.font = '14px Arial';
