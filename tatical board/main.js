@@ -6,7 +6,7 @@ let grid=[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
 
 function updateUi() {
 for(let i in grid){
-for(let j in grid[i])
+for(let j in grid[i]){
 ctx.fillStyle = "green"
 ctx.strokeStyle = '#000';
 ctx.lineWidth = 2;
