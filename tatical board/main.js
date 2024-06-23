@@ -5,12 +5,15 @@ const ctx = canvas.getContext("2d");
 let grid=[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
 
 function updateUi() {
-
-  ctx.font = '14px Arial';
-  ctx.fillStyle = 'black';
-
-  //button pass
-  ctx.fillText("pass", 50, 50)
+for(let i in grid){
+for(let j in grid[i])
+ctx.fillStyle = "green"
+ctx.strokeStyle = '#000';
+ctx.lineWidth = 2;
+ctx.fillRect(50*i, 50*j, 50, 50)
+ctx.strokeRect(50*i, 50*j, 50, 50)
+}
+}
 }
 
 function update() {
