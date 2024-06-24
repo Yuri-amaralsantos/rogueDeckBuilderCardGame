@@ -54,12 +54,12 @@ canvas.addEventListener('touchstart', function(e) {
   let x = Math.trunc(touchX / 50)
   let y = Math.trunc(touchY / 50)
   move(x, y)
-/*
-grid[p1.x][p1.y]=0
+
+//grid[p1.x][p1.y]=0
 p1.x=x
 p1.y=y
-grid[p1.x][p1.y]=1
-*/
+//grid[p1.x][p1.y]=1
+
 
 }
 });
