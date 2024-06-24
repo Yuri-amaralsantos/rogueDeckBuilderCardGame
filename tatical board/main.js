@@ -37,9 +37,14 @@ function update() {
 
 update()
 
+function move(){
+  
+}
+
 canvas.addEventListener('touchstart', function(e) {
   const touchX = e.touches[0].clientX - canvas.offsetLeft;
   const touchY = e.touches[0].clientY - canvas.offsetTop;
+  if(touchX<=200 && touchY<=200){
   let x = Math.trunc(touchX / 50)
   let y = Math.trunc(touchY / 50)
 grid[p1.x][p1.y]=0
@@ -47,4 +52,5 @@ p1.x=x
 p1.y=y
 grid[p1.x][p1.y]=1
 
+}
 });
