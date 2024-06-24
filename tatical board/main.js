@@ -9,7 +9,13 @@ let p1={x:0, y:0}
 function updateUi() {
   for (let i in grid) {
     for (let j in grid[i]) {
-      if(grid[i][j]==0){
+      
+      if(
+        i==p1.x-1 && j== p1.y ||
+        i==p1.x+1 && j== p1.y ||
+        i==p1.x && j== p1.y+1 ||
+        i==p1.x && j== p1.y-1 
+      ){
         ctx.fillStyle = "green"
       } else{
         ctx.fillStyle = "red"
@@ -37,7 +43,7 @@ function update() {
 
 update()
 
-function move(){
+function move(x, y){
   
 }
 
@@ -47,10 +53,13 @@ canvas.addEventListener('touchstart', function(e) {
   if(touchX<=200 && touchY<=200){
   let x = Math.trunc(touchX / 50)
   let y = Math.trunc(touchY / 50)
+  move(x, y)
+/*
 grid[p1.x][p1.y]=0
 p1.x=x
 p1.y=y
 grid[p1.x][p1.y]=1
+*/
 
 }
 });
