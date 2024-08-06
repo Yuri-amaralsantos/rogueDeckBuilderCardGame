@@ -1,6 +1,7 @@
-export function control(e) {
+export function controle (e) {
   const touchX = e.touches[0].clientX - canvas.offsetLeft;
   const touchY = e.touches[0].clientY - canvas.offsetTop;
+  /*
   for (let i in hand) {
     if (touchX >= handPos[i] && touchX <= handPos[i] + 58 &&
       touchY >= 490 && touchY <= 490 + 80) {
@@ -21,9 +22,11 @@ export function control(e) {
       }
     }
   }
+  */
   if (touchX >= 310 && touchX <= 310 + 60 &&
     touchY >= 230 && touchY <= 230 + 30) {
-    pass()
+    //pass()
+    console.log(0)
   }
 
 }
