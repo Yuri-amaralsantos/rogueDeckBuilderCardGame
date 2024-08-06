@@ -1,7 +1,4 @@
-const canvas = document.getElementById("canvas");
-    canvas.width = 370
-    canvas.height =600
-    const ctx = canvas.getContext("2d");
+
 
 
 class Card{

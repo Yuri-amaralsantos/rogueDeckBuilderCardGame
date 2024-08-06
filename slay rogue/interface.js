@@ -1,4 +1,11 @@
-function updateUi() {
+const canvas = document.getElementById("canvas");
+canvas.width = 370
+canvas.height = 600
+const ctx = canvas.getContext("2d");
+
+export function updateUi() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  /*
   //hand
   for (let i in hand) {
     ctx.fillStyle = "green"
@@ -33,7 +40,7 @@ function updateUi() {
     ctx.fillText("hp:" + bots[i].hp +"+"+bots[i].armor, botPos[i] + 10, 130)
     ctx.fillText(bots[i].action.t1, botPos[i] + 10, 150)
   }
-
+*/
   //pass
   ctx.beginPath();
   ctx.rect(310, 230, 60, 30);
@@ -50,11 +57,11 @@ function updateUi() {
   ctx.fillText("pass", 325, 250)
 
   
-
+/*
   //hp player
   ctx.fillText("player hp:" + p1.hp+"+"+p1.armor, 30, 450)
   ctx.fillText("mana: " + p1.mana, 30, 470)
-
+*/
 
 
 }

@@ -1,5 +1,5 @@
+import {updateUi} from "./interface.js"
 function update() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
   updateUi();
 
   requestAnimationFrame(update);
@@ -8,6 +8,7 @@ function update() {
 
 update()
 
+/*
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -15,9 +16,9 @@ function shuffleArray(array) {
   }
   return array;
 }
+*/
 
-
-
+/*
 function start() {
   shuffleArray(deck)
   draw(4)
@@ -26,7 +27,6 @@ function start() {
   }
 }
 start()
-
 
 
 
@@ -106,3 +106,4 @@ canvas.addEventListener('touchstart', function(e) {
   }
 
 });
+*/
