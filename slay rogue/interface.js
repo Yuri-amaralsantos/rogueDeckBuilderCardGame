@@ -1,3 +1,5 @@
+import {player} from "./player.js"
+
 const canvas = document.getElementById("canvas");
 canvas.width = 370
 canvas.height = 600
@@ -57,11 +59,11 @@ export function updateUi() {
   ctx.fillText("pass", 325, 250)
 
   
-/*
+
   //hp player
-  ctx.fillText("player hp:" + p1.hp+"+"+p1.armor, 30, 450)
-  ctx.fillText("mana: " + p1.mana, 30, 470)
-*/
+  ctx.fillText("player hp:" + player.hp+"+"+player.armor, 30, 450)
+  ctx.fillText("mana: " + player.mana, 30, 470)
+
 
 
 }
