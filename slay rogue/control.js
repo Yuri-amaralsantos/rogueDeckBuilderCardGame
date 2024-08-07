@@ -31,7 +31,6 @@ export function controle (e) {
   if (touchX >= 310 && touchX <= 310 + 60 &&
     touchY >= 230 && touchY <= 230 + 30) {
     pass()
-    //console.log(0)
   }
 
 }
