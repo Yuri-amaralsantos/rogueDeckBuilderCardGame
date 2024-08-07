@@ -9,15 +9,14 @@ export function controle (e) {
     if (touchX >= 10+(58*i) && touchX <= (10+(58*i))+58 &&
       touchY >= 490 && touchY <= 490 + 80) {
      console.log(i)
-     /*
-      if (p1.mana >= hand[i].cost) {
-        playEffect(p1, bots[p1.target], hand[i])
-        p1.mana -= hand[i].cost
-        discard.push(hand[i])
-        hand.splice(i, 1)
+    
+      if (player.mana >= player.hand[i].cost) {
+        //playEffect(p1, bots[p1.target], hand[i])
+        player.mana -= player.hand[i].cost
+        //discard.push(hand[i])
+        player.hand.splice(i, 1)
       }
       break
-*/
     }
     /*
     for (let i in bots) {
@@ -31,8 +30,8 @@ export function controle (e) {
   }
   if (touchX >= 310 && touchX <= 310 + 60 &&
     touchY >= 230 && touchY <= 230 + 30) {
-    //pass()
-    console.log(0)
+    pass()
+    //console.log(0)
   }
 
 }
