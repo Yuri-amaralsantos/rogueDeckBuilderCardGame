@@ -16,11 +16,11 @@ export function updateUi() {
     ctx.fillRect(10+(58*i), 490, 58, 80)
     ctx.strokeRect(10+(58*i), 490, 58, 80);
 
-    ctx.font = '11px Arial';
+    ctx.font = '10px Arial';
     ctx.fillStyle = 'white';
     ctx.fillText(player.hand[i].cost, 20+(58*i), 510)
     ctx.fillText(player.hand[i].t1, 20+(58*i), 530)
-    if(hand[i].t2){
+    if(player.hand[i].t2){
        ctx.fillText(player.hand[i].t2, 20+(58*i), 550)
     }
 

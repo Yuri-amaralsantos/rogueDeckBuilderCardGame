@@ -12,7 +12,7 @@ class Player{
   { ...cddb[0]}, 
   { ...cddb[0]}, 
   { ...cddb[1]}, 
-  { ...cddb[1]}, 
+  { ...cddb[2]}, 
   ]
   
   deck = []
