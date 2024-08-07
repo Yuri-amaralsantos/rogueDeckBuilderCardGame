@@ -1,5 +1,5 @@
 import {player} from "./player.js"
-
+import {pass} from "./data.js"
 
 
 export function controle (e) {

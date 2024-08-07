@@ -11,9 +11,7 @@ function update() {
 
 update()
 
-class Game{
-  
-}
+
 
 /*
 function shuffleArray(array) {
@@ -53,35 +51,10 @@ function draw(x) {
 }
 
 */
-function pass() {
-  if (turn == "player") {
-    player.vulnerable = -1
-    player.weak = -1
-    turn = "bot"
-    for (let i in bots) {
-      bots[i].armor = 0
-      playEffect(bots[i], p1, bots[i].action)
-      bots[i].vulnerable -= 1
-      bots[i].weak -= 1
-    }
-    pass()
-  } else {
-    turn = "player"
-    player.armor = 0
-    player.mana = 3
-    
-    for (let i in bots) {
-      bots[i].choose()
-    }
-    let x = hand.length
-    for (let i = 0; i < x; i++) {
-      discard.push(hand[0])
-      hand.splice(0, 1)
-    }
 
-    draw(4)
-  }
+function rng(min, max) {
+  let value = Math.floor(Math.random() * (max +1)) + min
+  return value
 }
-
 
 canvas.addEventListener('touchstart', controle);

@@ -1,4 +1,4 @@
-
+import { player } from "./player.js"
 
 
 class Card{
@@ -20,13 +20,42 @@ let a3={t1:"atk/def", damage:3, block:3}
 let a4={t1:"weak",weak:2}
 
 
+export let game={turn:"player"}
+//let texto = ""
 
+export function pass() {
+  if (game.turn == "player") {
+    game.turn="bot"
+    /*
+    player.vulnerable = -1
+    player.weak = -1
+    turn = "bot"
+    for (let i in bots) {
+      bots[i].armor = 0
+      playEffect(bots[i], p1, bots[i].action)
+      bots[i].vulnerable -= 1
+      bots[i].weak -= 1
+    }
+    */
+    //pass()
+  } else {
+    game.turn = "player"
+    player.armor = 0
+    player.mana = 3
+/*
+    for (let i in bots) {
+      bots[i].choose()
+    }
+    let x = hand.length
+    for (let i = 0; i < x; i++) {
+      discard.push(hand[0])
+      hand.splice(0, 1)
+    }
 
-
-let turn="player"
-let texto = ""
-
-function rng(min, max) {
-  let value = Math.floor(Math.random() * (max +1)) + min
-  return value
+    draw(4)
+  */
+  }
 }
+
+
+

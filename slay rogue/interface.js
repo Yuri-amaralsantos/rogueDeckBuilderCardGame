@@ -1,4 +1,5 @@
 import {player} from "./player.js"
+import {game} from "./data.js"
 
 const canvas = document.getElementById("canvas");
 canvas.width = 370
@@ -50,7 +51,8 @@ export function updateUi() {
   ctx.font = '14px Arial';
   ctx.fillStyle = 'black'
   ctx.fillText("pass", 325, 250)
-
+  
+  ctx.fillText("turn:" + game.turn, 30, 400)
   
   //hp player
   ctx.fillText("player hp:" + player.hp+"+"+player.armor, 30, 450)
