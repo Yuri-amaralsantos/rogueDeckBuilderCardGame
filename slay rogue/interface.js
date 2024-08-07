@@ -42,7 +42,7 @@ export function updateUi() {
     ctx.fillText("hp:" + bots[i].hp + "+" + bots[i].armor, 50 + (110 * i), 130)
     //ctx.fillText(bots[i].action.t1, botPos[i] + 10, 150)
   }
-  */
+  
   //pass
   ctx.fillStyle = "orange"
   ctx.fillRect(310, 230, 60, 30);

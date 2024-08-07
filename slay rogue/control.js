@@ -1,4 +1,5 @@
 import {player} from "./player.js"
+import {bots} from "./enemy.js"
 import {pass} from "./data.js"
 
 
@@ -18,15 +19,14 @@ export function controle (e) {
       }
       break
     }
-    /*
     for (let i in bots) {
-      if (touchX >= botPos[i] && touchX <= botPos[i] + 60 &&
+      if (touchX >= 50 + (110 * i) && touchX <= 50 + (110 * i) + 110 &&
         touchY >= 90 && touchY <= 90 + 30) {
-        p1.target = i
+        player.target = i
         break
       }
     }
-    */
+
   }
   if (touchX >= 310 && touchX <= 310 + 60 &&
     touchY >= 230 && touchY <= 230 + 30) {
