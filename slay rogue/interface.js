@@ -5,7 +5,6 @@ canvas.width = 370
 canvas.height = 600
 const ctx = canvas.getContext("2d");
 
-let handPos = [10, 68, 126, 184, 242, 300]
 
 export function updateUi() {
   ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -14,16 +13,17 @@ export function updateUi() {
     ctx.fillStyle = "green"
     ctx.strokeStyle = '#000';
     ctx.lineWidth = 2;
-    ctx.fillRect(handPos[i], 490, 58, 80)
-    ctx.strokeRect(handPos[i], 490, 58, 80);
+    ctx.fillRect(10+(58*i), 490, 58, 80)
+    ctx.strokeRect(10+(58*i), 490, 58, 80);
 
     ctx.font = '11px Arial';
     ctx.fillStyle = 'white';
-    ctx.fillText(player.hand[i].cost, handPos[i] + 10, 510)
-    ctx.fillText(player.hand[i].t1, handPos[i] + 10, 530)
+    ctx.fillText(player.hand[i].cost, 20+(58*i), 510)
+    ctx.fillText(player.hand[i].t1, 20+(58*i), 530)
     if(hand[i].t2){
-       ctx.fillText(player.hand[i].t2, handPos[i] + 10, 550)
+       ctx.fillText(player.hand[i].t2, 20+(58*i), 550)
     }
+
   }
 /*
   for (let i in bots) {
@@ -45,22 +45,13 @@ export function updateUi() {
   }
 */
   //pass
-  ctx.beginPath();
-  ctx.rect(310, 230, 60, 30);
   ctx.fillStyle = "orange"
-  ctx.fill();
-  ctx.closePath();
-
-
-
+  ctx.fillRect(310, 230, 60, 30);
   ctx.font = '14px Arial';
-  ctx.fillStyle = 'black';
-
-  //button pass
+  ctx.fillStyle = 'black'
   ctx.fillText("pass", 325, 250)
 
   
-
   //hp player
   ctx.fillText("player hp:" + player.hp+"+"+player.armor, 30, 450)
   ctx.fillText("mana: " + player.mana, 30, 470)
