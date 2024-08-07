@@ -5,6 +5,8 @@ canvas.width = 370
 canvas.height = 600
 const ctx = canvas.getContext("2d");
 
+let handPos = [10, 68, 126, 184, 242, 300]
+
 export function updateUi() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   /*

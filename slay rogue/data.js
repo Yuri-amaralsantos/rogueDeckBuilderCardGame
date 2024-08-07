@@ -4,10 +4,15 @@
 class Card{
   
 }
-let c1 ={t1:"strike", cost:1, damage:6
+
+export let cardDatabase={
+c1:{t1:"strike", cost:1, damage:6
+},
+c2:{t1:"block", cost:1, block: 5},
+c3:{t1:"heavy", t2:"strike", cost:2, damage: 8, vulnerable:2},
 }
-let c2 ={t1:"block", cost:1, block: 5}
-let c3 ={t1:"heavy", t2:"strike", cost:2, damage: 8, vulnerable:2}
+
+
 
 let a1={t1:"atk",damage:5}
 let a2={t1:"def",block:5}

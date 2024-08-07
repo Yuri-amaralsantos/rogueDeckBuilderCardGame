@@ -1,4 +1,4 @@
-exportclass Bot {
+export class Bot {
   constructor(name, acts) {
     this.name = name
     this.actionList = acts
