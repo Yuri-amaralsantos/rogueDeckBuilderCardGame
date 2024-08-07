@@ -8,10 +8,9 @@ const ctx = canvas.getContext("2d");
 let handPos = [10, 68, 126, 184, 242, 300]
 
 export function updateUi() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  /*
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
   //hand
-  for (let i in hand) {
+  for (let i in player.hand) {
     ctx.fillStyle = "green"
     ctx.strokeStyle = '#000';
     ctx.lineWidth = 2;
@@ -20,13 +19,13 @@ export function updateUi() {
 
     ctx.font = '11px Arial';
     ctx.fillStyle = 'white';
-    ctx.fillText(hand[i].cost, handPos[i] + 10, 510)
-    ctx.fillText(hand[i].t1, handPos[i] + 10, 530)
+    ctx.fillText(player.hand[i].cost, handPos[i] + 10, 510)
+    ctx.fillText(player.hand[i].t1, handPos[i] + 10, 530)
     if(hand[i].t2){
-       ctx.fillText(hand[i].t2, handPos[i] + 10, 550)
+       ctx.fillText(player.hand[i].t2, handPos[i] + 10, 550)
     }
   }
-
+/*
   for (let i in bots) {
     ctx.beginPath();
     ctx.rect(botPos[i], 90, 60, 30);

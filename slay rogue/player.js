@@ -1,4 +1,4 @@
-
+import {cddb} from "./data.js"
 
 class Player{
   mana= 3
@@ -7,7 +7,14 @@ class Player{
   target=0
   vulnerable=0
   weak=0
-  deck = [{ ...c1 }, { ...c1 }, { ...c1 }, { ...c1 }, { ...c1 }, { ...c2 }, { ...c2 }, { ...c2 }, { ...c2 }, { ...c3 }]
+  deck = [
+  { ...cddb[0]}, 
+  { ...cddb[0]}, 
+  { ...cddb[0]}, 
+  { ...cddb[1]}, 
+  { ...cddb[1]}, 
+  ]
+  
   hand = []
   discard = []
 }

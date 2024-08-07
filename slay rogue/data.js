@@ -5,12 +5,12 @@ class Card{
   
 }
 
-export let cardDatabase={
-c1:{t1:"strike", cost:1, damage:6
+export let cddb=[
+{t1:"strike", cost:1, damage:6
 },
-c2:{t1:"block", cost:1, block: 5},
-c3:{t1:"heavy", t2:"strike", cost:2, damage: 8, vulnerable:2},
-}
+{t1:"block", cost:1, block: 5},
+{t1:"heavy", t2:"strike", cost:2, damage: 8, vulnerable:2},
+]
 
 
 
@@ -23,7 +23,7 @@ let a4={t1:"weak",weak:2}
 
 
 
-turn="player"
+let turn="player"
 let texto = ""
 
 function rng(min, max) {
