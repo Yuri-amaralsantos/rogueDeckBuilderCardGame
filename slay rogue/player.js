@@ -9,3 +9,7 @@ export class Player{
 
 let p1 = new Player()
 
+let deck = [{ ...c1 }, { ...c1 }, { ...c1 }, { ...c1 }, { ...c1 }, { ...c2 }, { ...c2 }, { ...c2 }, { ...c2 }, { ...c3 }]
+let hand = []
+let discard = []
+let handPos = [10, 68, 126, 184, 242, 300]

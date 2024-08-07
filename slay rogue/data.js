@@ -14,10 +14,7 @@ let a2={t1:"def",block:5}
 let a3={t1:"atk/def", damage:3, block:3}
 let a4={t1:"weak",weak:2}
 
-let deck = [{...c1},{...c1},{...c1},{...c1},{...c1},{...c2},{...c2},{...c2},{...c2},{...c3}]
-let hand =  []
-let discard=[]
-let handPos=[10, 68, 126, 184, 242, 300]
+
 
 
 
