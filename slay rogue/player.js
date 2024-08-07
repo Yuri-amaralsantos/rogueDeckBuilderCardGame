@@ -1,4 +1,4 @@
-export class Player{
+class Player{
   mana= 3
   hp=30
   armor=0
@@ -7,7 +7,7 @@ export class Player{
   weak=0
 }
 
-let p1 = new Player()
+export let p1 = new Player()
 
 let deck = [{ ...c1 }, { ...c1 }, { ...c1 }, { ...c1 }, { ...c1 }, { ...c2 }, { ...c2 }, { ...c2 }, { ...c2 }, { ...c3 }]
 let hand = []

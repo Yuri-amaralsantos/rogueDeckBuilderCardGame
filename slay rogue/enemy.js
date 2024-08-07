@@ -1,4 +1,4 @@
-class Bot {
+exportclass Bot {
   constructor(name, acts) {
     this.name = name
     this.actionList = acts
@@ -20,7 +20,7 @@ let mob2 = new Bot("mob2", [a1, a2, a3])
 
 
 
-let bots = [{ ...mob1 }, { ...mob1 }, { ...mob2 }]
+export let bots = [{ ...mob1 }, { ...mob1 }, { ...mob2 }]
 
 bots[0].choose()
 let botPos = [50, 160, 270]
