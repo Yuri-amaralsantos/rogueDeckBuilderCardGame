@@ -26,7 +26,7 @@ class Player {
         this.deck = this.discard
       }
       this.hand.push(this.deck[0])
-      .deck.splice(0, 1)
+      this.deck.splice(0, 1)
     }
   }
 

@@ -1,7 +1,7 @@
 import {player} from "./player.js"
 import {bots} from "./enemy.js"
 import {pass} from "./data.js"
-import {playEffect} from "./effects"
+import {playEffect} from "./effects.js"
 
 
 export function controle (e) {
@@ -12,7 +12,7 @@ export function controle (e) {
       touchY >= 490 && touchY <= 490 + 80) {
     
       if (player.mana >= player.hand[i].cost) {
-        playEffect(p1, bots[p1.target], hand[i])
+        playEffect(player, bots[player.target], player.hand[i])
         player.mana -= player.hand[i].cost
         player.discard.push(hand[i])
         player.hand.splice(i, 1)

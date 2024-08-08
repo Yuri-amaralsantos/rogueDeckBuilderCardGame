@@ -1,4 +1,5 @@
 import{bots} from "./enemy.js"
+import{player} from "./player.js"
 import{game} from "./data.js"
 
 export function playEffect(cast, tg, x) {
@@ -28,8 +29,8 @@ export function playEffect(cast, tg, x) {
     }
     tg.hp-=Math.round(dmg)
     if (game.turn == "player") {
-      if (bots[p1.target].hp < 1) {
-        bots.splice(p1.target, 1)
+      if (bots[player.target].hp < 1) {
+        bots.splice(playet.target, 1)
       }
     }
 
