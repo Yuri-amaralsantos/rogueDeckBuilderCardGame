@@ -14,7 +14,7 @@ export function controle (e) {
       if (player.mana >= player.hand[i].cost) {
         playEffect(player, bots[player.target], player.hand[i])
         player.mana -= player.hand[i].cost
-        player.discard.push(hand[i])
+        player.discard.push(player.hand[i])
         player.hand.splice(i, 1)
       }
       break

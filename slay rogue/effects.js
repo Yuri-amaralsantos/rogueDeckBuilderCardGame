@@ -30,7 +30,7 @@ export function playEffect(cast, tg, x) {
     tg.hp-=Math.round(dmg)
     if (game.turn == "player") {
       if (bots[player.target].hp < 1) {
-        bots.splice(playet.target, 1)
+        bots.splice(player.target, 1)
       }
     }
 
