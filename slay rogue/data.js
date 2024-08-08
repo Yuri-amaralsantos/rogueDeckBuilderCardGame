@@ -54,7 +54,7 @@ export function pass() {
       player.hand.splice(0, 1)
     }
 
-    draw(4)
+    player.draw(4)
   
   }
 }
