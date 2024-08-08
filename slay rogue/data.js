@@ -29,7 +29,7 @@ export function pass() {
     /*
     player.vulnerable = -1
     player.weak = -1
-    turn = "bot"
+    
     for (let i in bots) {
       bots[i].armor = 0
       playEffect(bots[i], p1, bots[i].action)
@@ -37,7 +37,7 @@ export function pass() {
       bots[i].weak -= 1
     }
     */
-    //pass()
+    pass()
   } else {
     game.turn = "player"
     player.armor = 0
@@ -46,14 +46,16 @@ export function pass() {
     for (let i in bots) {
       bots[i].choose()
     }
-    let x = hand.length
+    
+  */
+    let x = player.hand.length
     for (let i = 0; i < x; i++) {
-      discard.push(hand[0])
-      hand.splice(0, 1)
+      player.discard.push(player.hand[0])
+      player.hand.splice(0, 1)
     }
 
     draw(4)
-  */
+  
   }
 }
 

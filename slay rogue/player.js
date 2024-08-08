@@ -8,14 +8,16 @@ class Player{
   vulnerable=0
   weak=0
   hand = [
+
+  ]
+  
+  deck = [
   { ...cddb[0]}, 
   { ...cddb[0]}, 
   { ...cddb[0]}, 
   { ...cddb[1]}, 
   { ...cddb[2]}, 
   ]
-  
-  deck = []
   discard = []
 }
 
