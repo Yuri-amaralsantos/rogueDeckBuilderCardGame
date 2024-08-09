@@ -15,6 +15,7 @@ class Bot {
   choose() {
     let r = rng(0, this.actionList.length - 1)
     this.action = this.actionList[r]
+    console.log(this.action)
   }
 }
 
@@ -23,9 +24,6 @@ function rng(min, max) {
   let value = Math.floor(Math.random() * (max + 1)) + min
   return value
 }
-
-//fix this
-//cada mob deve ser uma instancia do bot mas manter as funções 
 
 
 export let bots = [

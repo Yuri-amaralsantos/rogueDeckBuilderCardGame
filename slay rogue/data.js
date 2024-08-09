@@ -1,5 +1,5 @@
 import { player } from "./player.js"
-
+import {bots} from "./enemy.js"
 
 class Card{
   
@@ -32,28 +32,25 @@ export let game={turn:"player"}
 export function pass() {
   if (game.turn == "player") {
     game.turn="bot"
-    /*
     player.vulnerable = -1
     player.weak = -1
     
     for (let i in bots) {
       bots[i].armor = 0
-      playEffect(bots[i], p1, bots[i].action)
+      playEffect(bots[i], player, bots[i].action)
+      console.log(0)
       bots[i].vulnerable -= 1
       bots[i].weak -= 1
     }
-    */
     pass()
   } else {
     game.turn = "player"
     player.armor = 0
     player.mana = 3
-/*
     for (let i in bots) {
       bots[i].choose()
     }
     
-  */
     let x = player.hand.length
     for (let i = 0; i < x; i++) {
       player.discard.push(player.hand[0])
