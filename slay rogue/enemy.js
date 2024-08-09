@@ -1,9 +1,9 @@
-import {act} from "./data.js"
+import {botList} from "./data.js"
 
 class Bot {
-  constructor(name, acts) {
-    this.name = name
-    this.actionList = acts
+  constructor(obj) {
+    this.name = obj.name
+    this.actionList = obj.actions
   }
   hp = 20
   armor = 0
@@ -18,6 +18,7 @@ class Bot {
   }
 }
 
+
 function rng(min, max) {
   let value = Math.floor(Math.random() * (max + 1)) + min
   return value
@@ -25,8 +26,11 @@ function rng(min, max) {
 
 //fix this
 //cada mob deve ser uma instancia do bot mas manter as funções 
-let mob1 = new Bot("mob1", [act[0], act[1], act[3]])
-let mob2 = new Bot("mob2", [act[0], act[1], act[2]])
 
 
-export let bots = [ mob1, mob1, mob2]
+export let bots = [
+new Bot(botList[0]),
+new Bot(botList[0]),
+new Bot(botList[1])
+]
+

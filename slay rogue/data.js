@@ -14,11 +14,16 @@ export let cddb=[
 
 
 
-export let act=[
+let act=[
 {t1:"atk",damage:5},
 {t1:"def",block:5},
 {t1:"atk/def", damage:3, block:3},
 {t1:"weak",weak:2},
+]
+
+export let botList=[
+{name:"mob1", actions:[act[0], act[1], act[3]]},
+{name:"mob2", actions:[act[0], act[1], act[2]]}
 ]
 
 export let game={turn:"player"}
