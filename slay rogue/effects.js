@@ -1,6 +1,6 @@
 import{bots} from "./enemy.js"
 import{player} from "./player.js"
-import{game} from "./data.js"
+import{game} from "./game.js"
 
 export function playEffect(cast, tg, x) {
   if (x.damage) {

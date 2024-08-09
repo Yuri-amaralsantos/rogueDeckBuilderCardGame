@@ -1,6 +1,6 @@
 import {player} from "./player.js"
 import {bots} from "./enemy.js"
-import {pass} from "./data.js"
+import {game} from "./game.js"
 import {playEffect} from "./effects.js"
 
 
@@ -30,7 +30,7 @@ export function controle (e) {
   }
   if (touchX >= 310 && touchX <= 310 + 60 &&
     touchY >= 230 && touchY <= 230 + 30) {
-    pass()
+    game.pass()
   }
 
 }
