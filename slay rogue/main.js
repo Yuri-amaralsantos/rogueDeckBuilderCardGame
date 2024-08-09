@@ -21,7 +21,7 @@ function start() {
   player.shuffleArray(player)
   player.draw(4)
   for (let i in bots) {
-    //bots[i].choose()
+    bots[i].choose()
     
   }
 }
