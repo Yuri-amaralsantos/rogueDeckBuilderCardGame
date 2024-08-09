@@ -1,6 +1,6 @@
 import { player } from "./player.js"
 import { bots } from "./enemy.js"
-import { game } from "./data.js"
+import { game } from "./game.js"
 
 const canvas = document.getElementById("canvas");
 canvas.width = 370

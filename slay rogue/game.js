@@ -1,7 +1,7 @@
-import{player} from "./player.js"
-import{bots} from "./enemy.js"
+import {player} from "./player.js"
+import {bots} from "./enemy.js"
 
-class Game{
+class GameControl{
 turn="player"
 
  pass() {
@@ -13,13 +13,12 @@ turn="player"
     for (let i in bots) {
       bots[i].armor = 0
       playEffect(bots[i], player, bots[i].action)
-      console.log(0)
       bots[i].vulnerable -= 1
       bots[i].weak -= 1
     }
-    pass()
+    this.pass()
   } else {
-    game.turn = "player"
+    this.turn = "player"
     player.armor = 0
     player.mana = 3
     for (let i in bots) {
@@ -37,4 +36,4 @@ turn="player"
   }
 }
 
-export let game= new Game()
+export let game= new GameControl()
