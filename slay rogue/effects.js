@@ -3,6 +3,7 @@ import{player} from "./player.js"
 import{game} from "./game.js"
 
 export function playEffect(cast, tg, x) {
+  console.log(cast, tg, x)
   if (x.damage) {
 
     let dmg

@@ -1,5 +1,6 @@
 import { player } from "./player.js"
 import { bots } from "./enemy.js"
+import {playEffect} from "./effects.js"
 
 class GameControl {
   turn = "player"

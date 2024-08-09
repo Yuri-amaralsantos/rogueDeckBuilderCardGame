@@ -15,7 +15,6 @@ class Bot {
   choose() {
     let r = rng(0, this.actionList.length - 1)
     this.action = this.actionList[r]
-    console.log(this.action)
   }
 }
 
