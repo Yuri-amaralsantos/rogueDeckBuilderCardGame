@@ -40,7 +40,7 @@ export function updateUi() {
     ctx.fillStyle = 'black';
     ctx.fillText(bots[i].name, 50 + (110 * i), 90)
     ctx.fillText("hp:" + bots[i].hp + "+" + bots[i].armor, 50 + (110 * i), 130)
-    //ctx.fillText(bots[i].action.t1, botPos[i] + 10, 150)
+    ctx.fillText(bots[i].action.t1, 50 + (110 * i), 150)
   }
   
   //pass

@@ -14,11 +14,12 @@ export let cddb=[
 
 
 
-let a1={t1:"atk",damage:5}
-let a2={t1:"def",block:5}
-let a3={t1:"atk/def", damage:3, block:3}
-let a4={t1:"weak",weak:2}
-
+export let act=[
+{t1:"atk",damage:5},
+{t1:"def",block:5},
+{t1:"atk/def", damage:3, block:3},
+{t1:"weak",weak:2},
+]
 
 export let game={turn:"player"}
 //let texto = ""

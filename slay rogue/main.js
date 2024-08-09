@@ -1,7 +1,7 @@
 import {updateUi} from "./interface.js"
 import {controle} from "./control.js"
 import {player} from "./player.js"
-
+import {bots} from "./enemy.js"
 
 function update() {
   updateUi();
@@ -20,11 +20,10 @@ update()
 function start() {
   player.shuffleArray(player)
   player.draw(4)
-  /*
   for (let i in bots) {
-    bots[i].choose()
+    //bots[i].choose()
+    
   }
-  */
 }
 start()
 
@@ -35,9 +34,6 @@ start()
 
 
 
-function rng(min, max) {
-  let value = Math.floor(Math.random() * (max +1)) + min
-  return value
-}
+
 
 canvas.addEventListener('touchstart', controle);
