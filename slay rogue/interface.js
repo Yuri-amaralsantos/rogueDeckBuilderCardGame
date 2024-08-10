@@ -25,6 +25,7 @@ export function updateUi() {
     if (player.hand[i].t2) {
       ctx.fillText(player.hand[i].t2, 20 + (58 * i), 550)
     }
+    
 
   }
   for (let i in bots) {
@@ -41,6 +42,8 @@ export function updateUi() {
     ctx.fillText(bots[i].name, 50 + (110 * i), 90)
     ctx.fillText("hp:" + bots[i].hp + "+" + bots[i].armor, 50 + (110 * i), 130)
     ctx.fillText(bots[i].action.t1, 50 + (110 * i), 150)
+    ctx.fillText("weak: " + player.weak , 50 + (110 * i), 170)
+    ctx.fillText("vuln.: " + player.vulnerable, 50 + (110 * i), 190)
   }
   
   //pass
@@ -55,7 +58,8 @@ export function updateUi() {
   //hp player
   ctx.fillText("player hp:" + player.hp + "+" + player.armor, 30, 450)
   ctx.fillText("mana: " + player.mana, 30, 470)
-
+  ctx.fillText("weak: "+player.weak, 130 , 450)
+    ctx.fillText("vuln.: "+player.vulnerable, 130, 470)
 
 
 }
