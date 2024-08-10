@@ -8,14 +8,22 @@ class GameControl {
   pass() {
     if (this.turn == "player") {
       this.turn = "bot"
+      if(player.weak>0){
       player.vulnerable = -1
+      }
+      if(player.vulnerable>0){
       player.weak = -1
+      }
 
       for (let i in bots) {
         bots[i].armor = 0
         playEffect(bots[i], player, bots[i].action)
+        if(bots[i].vulnerable>0){
         bots[i].vulnerable -= 1
+        }
+        if(bots[i].weak>0){
         bots[i].weak -= 1
+        }
       }
       this.pass()
     } else {
