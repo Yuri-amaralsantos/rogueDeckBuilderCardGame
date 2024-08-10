@@ -42,8 +42,8 @@ export function updateUi() {
     ctx.fillText(bots[i].name, 50 + (110 * i), 90)
     ctx.fillText("hp:" + bots[i].hp + "+" + bots[i].armor, 50 + (110 * i), 130)
     ctx.fillText(bots[i].action.t1, 50 + (110 * i), 150)
-    ctx.fillText("weak: " + player.weak , 50 + (110 * i), 170)
-    ctx.fillText("vuln.: " + player.vulnerable, 50 + (110 * i), 190)
+    ctx.fillText("weak: " + bots[i].weak , 50 + (110 * i), 170)
+    ctx.fillText("vuln.: " + bots[i].vulnerable, 50 + (110 * i), 190)
   }
   
   //pass

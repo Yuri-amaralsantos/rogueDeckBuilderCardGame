@@ -3,7 +3,6 @@ import{player} from "./player.js"
 import{game} from "./game.js"
 
 export function playEffect(cast, tg, x) {
-  console.log(cast, tg, x)
   if (x.damage) {
 
     let dmg
@@ -22,11 +21,11 @@ export function playEffect(cast, tg, x) {
     else {
       dmg = x.damage
     }
-    if(tg.vulnerable>1){
+    if(tg.vulnerable>0){
       dmg*=1.5
     }
-    if(cast.weak>1){
-      dmg*=0.7
+    if(cast.weak>0){
+      dmg*=0.75
     }
     tg.hp-=Math.round(dmg)
     if (game.turn == "player") {
