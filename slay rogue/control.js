@@ -10,8 +10,9 @@ export function controle (e) {
   for (let i in player.hand) {
     if (touchX >= 10+(58*i) && touchX <= (10+(58*i))+58 &&
       touchY >= 490 && touchY <= 490 + 80) {
-    
+      
       if (player.mana >= player.hand[i].cost) {
+        
         playEffect(player, bots[player.target], player.hand[i])
         player.mana -= player.hand[i].cost
         player.discard.push(player.hand[i])
