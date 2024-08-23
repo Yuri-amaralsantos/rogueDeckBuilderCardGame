@@ -1,7 +1,10 @@
+
 import {player} from "./player.js"
+/*
 import {bots} from "./enemy.js"
 import {game} from "./game.js"
 import {playEffect} from "./effects.js"
+*/
 
 
 export function controle (e) {
